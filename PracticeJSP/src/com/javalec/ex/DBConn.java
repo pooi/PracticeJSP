@@ -11,7 +11,7 @@ public class DBConn {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
-			String url = "jdbc:mysql://localhost:3306/dal?serverTimezone=UTC";
+			String url = "jdbc:mysql://localhost:3306/member?serverTimezone=UTC&useSSL=false";
 			String user = "shower";
 			String password = "123456";
 			
