@@ -5,9 +5,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConn {
+	static Connection conn = null;
 	
 	public static Connection getMySqlConnection() {
-		Connection conn = null;
+		if(conn != null)
+			return conn;
+		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
